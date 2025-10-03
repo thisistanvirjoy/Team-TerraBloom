@@ -73,7 +73,7 @@ export default function Loader({ onDone }: LoaderProps) {
           ref={logoRef}
           className="absolute inset-6 rounded-full bg-white grid place-items-center shadow-[0_0_40px_0_rgba(16,185,129,0.25)]"
         >
-          <img src="/logo.svg" alt="BloomTrack" className="w-40 h-40" />
+          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="BloomTrack" className="w-40 h-40" />
         </div>
       </div>
       <p ref={textRef} className="mt-6 text-sm tracking-wide opacity-90">
