@@ -51,6 +51,33 @@ Scripts:
 
 Open: `http://localhost:5173` (Vite may auto‑pick another port).
 
+## 🌐 Deploy
+
+The project is configured with `base: './'` so it works on GitHub Pages or Cloudflare Pages.
+
+### GitHub Pages
+
+1. Build
+   ```bash
+   npm run build
+   ```
+   This outputs to `dist/`.
+
+2. Deploy options
+   - Create a `gh-pages` branch and push the contents of `dist/` to it, then set Pages source to `gh-pages`.
+     ```bash
+     npm i -g gh-pages
+     gh-pages -d dist
+     ```
+   - Or set Pages to serve from `/docs` and copy: `cp -r dist docs`.
+
+### Cloudflare Pages
+
+1. New Project → Connect to this repo
+2. Build command: `npm run build`
+3. Output folder: `dist`
+4. Framework preset: Vite (or None)
+
 ## 🗺️ Maps
 
 This repo includes two complementary approaches:
